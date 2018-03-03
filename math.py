@@ -20,7 +20,7 @@ def full_permutation(choices, scale):
     char_cnt = len(choices)
     total = char_cnt ** scale
 
-    # default element in every position is the last character in choices.
+    # default element in every position is the first character in choices.
     seq = [choices[0]] * scale
     for count in range(total):
         index = 0
