@@ -12,7 +12,7 @@ def full_permutation(choices, scale):
        @choices: List. A character set that will be used to permutate.
        @scale: The number of elements.
        Example:
-           for sequence in full_permutation('012345', 10):
+           for sequence in full_permutation('123', 3):
               print sequence
            
     """
@@ -21,7 +21,7 @@ def full_permutation(choices, scale):
     total = char_cnt ** scale
 
     # default element in every position is the last character in choices.
-    seq = [choices[char_cnt - 1]] * scale
+    seq = [choices[0]] * scale
     for count in range(total):
         index = 0
         quot = count
@@ -36,6 +36,6 @@ def full_permutation(choices, scale):
 
 
 if __name__ == "__main__":
-    for sequence in full_permutation('012345', 4):
+    for sequence in full_permutation('123', 3):
         print sequence
 
